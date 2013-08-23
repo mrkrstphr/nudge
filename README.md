@@ -1,6 +1,6 @@
 # Nudge
 
-A simple Markdown-powered blogging platform written in PHP using Silex.
+A simple [Markdown](http://daringfireball.net/projects/markdown/syntax)-powered blogging platform written in PHP using [Silex](http://silex.sensiolabs.org).
 
 ## Installation
 
@@ -18,7 +18,7 @@ To create a new page, simply create a markdown (`blah.md`) file in the `data/pag
 
 ## Writing Articles
 
-To create a new article, simply create a markdown (`2013-07-04-Happy-America-Day.md`) file in the `data/articles` directory. To view it, navigate to `http://yoursite/articles/happy-america-day`. Simple!
+To create a new article, simply create a markdown (`2013-07-04-Happy-America-Day.md`) file in the `data/articles` directory. To view it, navigate to `http://yoursite/article/happy-america-day`. Simple!
 
 ## Modifying Your Layout
 
