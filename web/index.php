@@ -6,7 +6,7 @@ $dataDirectory = __DIR__ . '/../data';
 
 $app = new Silex\Application();
 $app->register(new Silex\Provider\TwigServiceProvider(), [
-    'twig.path' => __DIR__ . '/views',
+    'twig.path' => __DIR__ . '/../views',
 ]);
 
 $app->get('/page/{page}', function (Silex\Application $app, $page) use ($dataDirectory) {
@@ -68,6 +68,20 @@ $app->get('/', function (Silex\Application $app) use ($dataDirectory) {
 
     return $app['twig']->render('home.twig', [
         'articles' => $articles,
+    ]);
+});
+
+$app->error(function (\Exception $e, $code) use ($app) {
+    switch ($code) {
+        case 404:
+            $message = 'The requested page could not be found.';
+            break;
+        default:
+            $message = 'We are sorry, but something went terribly wrong.';
+    }
+
+    return $app['twig']->render('error.twig', [
+        'message' => $message,
     ]);
 });
 

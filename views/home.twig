@@ -3,7 +3,9 @@
     <h2>Recent Articles</h2>
     <ul id="navigation">
         {% for article in articles %}
-            <li><a href="{{ article.href }}">{{ article.title }}</a> - {{ article.date }}</li>
+            <li>
+                <a href="{{ article.href }}">{{ article.title }}</a> - <span class="date">{{ article.date }}</span>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
