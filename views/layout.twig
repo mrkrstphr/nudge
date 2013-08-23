@@ -10,10 +10,10 @@
 <body>
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <a href="/" class="navbar-brand">My Blog</a>
-            </div>
-            <div class="navbar-collapse collapse" id="navbar-main">
+            <div class="row">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">My Blog</a>
+                </div>
             </div>
         </div>
     </div>
@@ -23,10 +23,13 @@
     </div>
 
     <footer>
-        <div class="row">
-            {% block footer %}
-                &copy; Copyright {{ "now"|date("Y") }} Me.
-            {% endblock %}
+        <div class="container">
+            <div class="row">
+                <hr>
+                {% block footer %}
+                    &copy; Copyright {{ "now"|date("Y") }} Me.
+                {% endblock %}
+            </div>
         </div>
     </footer>
 </body>
