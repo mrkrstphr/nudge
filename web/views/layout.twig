@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <title>{% block title %}{% endblock %} - My Blog</title>
+        {% endblock %}
+    </head>
+<body>
+    <div id="header"><h1>My Blog</h1></div>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+            &copy; Copyright {{ "now"|date("Y") }} Me.
+        {% endblock %}
+    </div>
+</body>
+</html>
