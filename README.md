@@ -1,6 +1,6 @@
 # Nudge
 
-A simple Markdown-powered blogging platform written in PHP using Silex.
+A simple [Markdown](http://daringfireball.net/projects/markdown/syntax)-powered blogging platform written in PHP using [Silex](http://silex.sensiolabs.org).
 
 ## Installation
 
