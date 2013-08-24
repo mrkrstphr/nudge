@@ -52,6 +52,8 @@ $app->get('/article/{article}', function (Silex\Application $app, $article) use 
 $app->get('/', function (Silex\Application $app) use ($dataDirectory) {
     $files = glob($dataDirectory . '/articles/*.md');
 
+    $files = array_reverse($files);
+
     $articles = [];
 
     foreach ($files as $file) {
